@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Integr.</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body id="body">
+        <script src="./js/index.js" type="module"></script>
+        <header>
+            <div class="logo-container">
+                <div class="text-logo"></div>
+            </div>
+            <div>
+                <button id="connectButton"> Connect </button>
+            </div>
+        </header>
+
+        <main>
+            <div id="welcome" class="welcome-description">
+                <h1>Welcome to Integr<span class="blue">.</span> !</h1>
+                <hr/>
+                <p>Pour utiliser la plateforme, merci de bien vouloir vous connecter à votre compte.</p>
+            </div>
+            
+            <div id="search" class="search-container hide">
+                <input type="text" name="search" id="searchBar" placeholder="Tapez le logiciel que vous recherchez ...">
+                <button id="searchButton"> Rechercher </button>
+            </div>
+
+            <!-- Conteneur pour les résultats de recherche -->
+            <div id="softwareList" class="software-list"></div>
+        </main>
+        <footer>
+            <div class="footer-author">
+                <p>By <a href="https://github.com/v4ss">v4ss</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,295 @@
+@font-face {
+    font-family: RoadRadioBold;
+    src: url("./font/RoadRadio\ Bold.ttf");
+}
+@font-face {
+    font-family: Karla;
+    src: url("./font/Karla-VariableFont_wght.ttf");
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(160deg, #f1fdff, #008bc2);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.blue {
+    color: #00b7ff;
+}
+
+header {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 12px 35px 28px #ffffff;
+}
+
+header .logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+header .text-logo {
+    background: url("../img/logo-integr.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 80px;
+    vertical-align: middle;
+}
+
+header .logo-container .logo-text {
+    color: black;
+    font-family: RoadRadioBold;
+    font-size: 20px;
+}
+
+header button {
+    padding: 10px;
+    margin-right: 20px;
+    font-family: RoadRadioBold;
+    font-size: 14px;
+    color: black;
+    background: #ffffff;
+    border: #00b7ff solid 2px;
+    border-radius: 10px;
+}
+
+header button:hover {
+    padding: 11px;
+    margin-right: 19px;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+main .welcome-description {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.452);
+    border: #000000 solid 2px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+main .welcome-description h1 {
+    font-family: RoadRadioBold;
+    font-size: 30px;
+}
+
+main .welcome-description hr {
+    color: black;
+    border: #00b7ff solid 2px;
+}
+
+main .welcome-description p {
+    font-family: Karla;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+main .welcome-description .disclaimer {
+    color: rgb(212, 0, 0);
+    font-size: 14px;
+    font-style: italic;
+}
+
+main .search-container {
+    width: 100%;
+    text-align: center;
+}
+
+main .search-container button {
+    padding: 10px;
+    margin: 1px;
+    font-family: RoadRadioBold;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    background: #00b7ff;
+    border: #ffffff solid 2px;
+    border-radius: 10px;
+}
+
+main .search-container input {
+    padding: 10px;
+    margin: 1px;
+    width: 70%;
+    font-family: RoadRadioBold;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    border: #000000 solid 2px;
+    border-radius: 10px;
+}
+
+main .button-container button:hover {
+    padding: 11px;
+    margin: 0;
+}
+
+main .button-container input:hover {
+    padding: 11px;
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-logo {
+    background: url("../img/Texte-Hacky\'Nov-Depths-White.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 200px;
+}
+
+footer .footer-author {
+    padding: 80px 0 30px 0;
+}
+
+footer .footer-author p {
+    color: black;
+    font-weight: bold;
+    font-family: Karla;
+}
+
+footer .footer-author p a {
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+/* Styles pour la liste des résultats */
+#softwareList {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+}
+
+.software-item {
+    border: 1px solid #00b7ff;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.software-header {
+    display: flex;
+    font-family: Karla;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.software-header span.title {
+    font-family: RoadRadioBold;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.software-header span.other {
+    font-family: Karla;
+    font-size: 14px;
+}
+
+.software-header button {
+    background-color: #00b7ff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.software-details {
+    padding: 10px;
+    font-family: Karla;
+    background-color: #f1f8ff;
+    border-top: 1px solid #00b7ff;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.software-details.show {
+    display: block;
+}
+
+/* Styles pour la zone de drag & drop */
+.drag-drop-zone {
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #00b7ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: rgba(0, 183, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.drag-drop-zone:hover {
+    background-color: rgba(0, 183, 255, 0.2);
+}
+
+/* Icônes de correspondance */
+.hash-status {
+    font-size: 24px;
+    margin-top: 10px;
+    display: none;
+}
+
+.hash-status-container {
+    text-align: center;
+}
+
+.hash-status.success {
+    color: green;
+}
+
+.hash-status.error {
+    color: red;
+}
+
+/* Ajout de transition pour une animation fluide lors de l'extension de la div */
+.software-item.expanded {
+    max-height: 500px; /* Augmente en fonction des détails affichés */
+}
+
+.software-item.collapsed {
+    max-height: 60px;
+}
